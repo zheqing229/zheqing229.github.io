@@ -112,8 +112,8 @@ function initScrollAnimations() {
     const elements = document.querySelectorAll('.section-header, .highlight-card, .research-card, .publication-item, .timeline-item, .skill-category, .contact-method, .project-card, .education-card');
 
     const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -20px 0px'
+        threshold: 0,
+        rootMargin: '0px 0px 0px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -126,10 +126,10 @@ function initScrollAnimations() {
         });
     }, observerOptions);
 
-    elements.forEach((el, index) => {
+    elements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
-        el.style.transition = `all 0.35s cubic-bezier(0.16, 1, 0.3, 1) ${index * 0.04}s`;
+        el.style.transition = 'all 0.35s cubic-bezier(0.16, 1, 0.3, 1)';
         observer.observe(el);
     });
 }
