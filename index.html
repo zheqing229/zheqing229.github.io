@@ -473,7 +473,7 @@
                             <span class="contact-value">zhangzheqing@ruc.edu.cn</span>
                         </div>
                     </a>
-                    <a href="wechat:log10010000" class="contact-method">
+                    <div class="contact-method" onclick="navigator.clipboard.writeText('log10010000').then(()=>{this.querySelector('.copy-tip').style.opacity='1';setTimeout(()=>{this.querySelector('.copy-tip').style.opacity='0'},1500)})" style="cursor:pointer">
                         <div class="contact-icon">
                             <i class="fas fa-comment"></i>
                         </div>
@@ -481,7 +481,8 @@
                             <span class="contact-label" data-zh="微信" data-en="WeChat">微信</span>
                             <span class="contact-value">log10010000</span>
                         </div>
-                    </a>
+                        <span class="copy-tip" data-zh="已复制" data-en="Copied" style="opacity:0;margin-left:auto;color:#2563eb;font-size:0.85rem;transition:opacity 0.3s">已复制</span>
+                    </div>
                     <a href="https://github.com/zheqing229/" target="_blank" rel="noopener" class="contact-method">
                         <div class="contact-icon">
                             <i class="fab fa-github"></i>
