@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张哲卿 | Zheqing Zhang</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Language Toggle -->
+    <button class="lang-toggle" id="langToggle" aria-label="Switch Language">
+        <span class="lang-label" data-lang="zh">EN</span>
+        <span class="lang-label" data-lang="en">中</span>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">Zheqing Zhang</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active" data-section="home" data-zh="首页" data-en="Home">首页</a></li>
+                <li><a href="#about" class="nav-link" data-section="about" data-zh="关于" data-en="About">关于</a></li>
+                <li><a href="#research" class="nav-link" data-section="research" data-zh="研究" data-en="Research">研究</a></li>
+                <li><a href="#publications" class="nav-link" data-section="publications" data-zh="论文" data-en="Publications">论文</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects" data-zh="项目" data-en="Projects">项目</a></li>
+                <li><a href="#experience" class="nav-link" data-section="experience" data-zh="实习" data-en="Experience">实习</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact" data-zh="联系" data-en="Contact">联系</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-particles" id="particles"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-greeting animate-fade-in">
+                    <span class="greeting-line"></span>
+                    <span data-zh="欢迎访问我的个人主页" data-en="Welcome to my portfolio">欢迎访问我的个人主页</span>
+                </div>
+                <h1 class="hero-name animate-fade-in delay-1">
+                    <span class="name-zh">张哲卿</span>
+                    <span class="name-en">Zheqing Zhang</span>
+                </h1>
+                <p class="hero-title animate-fade-in delay-2">
+                    <span data-zh="人工智能 | 大模型智能体 | AI4Finance" data-en="AI | LLM Agents | AI4Finance">人工智能 | 大模型智能体 | AI4Finance</span>
+                </p>
+                <p class="hero-description animate-fade-in delay-3">
+                    <span data-zh="中国人民大学 · 高瓴人工智能学院 · 直博生" data-en="Renmin University of China · Gaoling School of AI · PhD Student">中国人民大学 · 高瓴人工智能学院 · 直博生</span>
+                </p>
+                <div class="hero-buttons animate-fade-in delay-4">
+                    <a href="#contact" class="btn btn-primary">
+                        <span data-zh="联系我" data-en="Contact Me">联系我</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#publications" class="btn btn-outline">
+                        <span data-zh="查看论文" data-en="View Papers">查看论文</span>
+                    </a>
+                    <a href="张哲卿求职简历.pdf" target="_blank" class="btn btn-outline btn-cv">
+                        <i class="fas fa-download"></i>
+                        <span data-zh="下载简历" data-en="Download CV">下载简历</span>
+                        <span class="cv-date">2026.5</span>
+                    </a>
+                </div>
+                <div class="hero-social animate-fade-in delay-5">
+                    <a href="https://github.com/zheqing229/" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=2CJJifEAAAAJ&hl=en" target="_blank" rel="noopener" class="social-link" aria-label="Google Scholar">
+                        <i class="fas fa-graduation-cap"></i>
+                    </a>
+                    <a href="mailto:zhangzheqing@ruc.edu.cn" class="social-link" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image animate-fade-in delay-2">
+                <div class="image-wrapper">
+                    <div class="image-glow"></div>
+                    <img src="photo.jpg" alt="张哲卿 Zheqing Zhang" class="profile-photo">
+                    <div class="image-border"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator animate-fade-in delay-5">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span data-zh="向下滚动" data-en="Scroll Down">向下滚动</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-zh="关于我" data-en="About Me">关于我</span>
+                <h2 class="section-title" data-zh="个人简介" data-en="Who I Am">个人简介</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro" data-zh="我是中国人民大学高瓴人工智能学院的大四学生，已获直博资格。研究方向为大模型智能体（Agent）、深度研究（Deep Research）和AI4Finance。" data-en="I'm a senior student at Gaoling School of Artificial Intelligence, Renmin University of China, admitted to the direct PhD program. My research focuses on LLM Agents, Deep Research, and AI4Finance.">我是中国人民大学高瓴人工智能学院的大四学生，已获直博资格。研究方向为大模型智能体（Agent）、深度研究（Deep Research）和AI4Finance。</p>
+                    <p data-zh="在科研方面，我已在ACL 2025（Oral）和ACL Findings 2026上发表论文，研究成果涉及多智能体社会模拟和长程对话记忆框架。在产业方面，我参与了金融研报生成系统BullClaw的开发，在OpenFinArena评测中总榜排名第3、美国市场排名第1。" data-en="In research, I have published at ACL 2025 (Oral) and ACL Findings 2026, covering multi-agent social simulation and long-horizon conversational memory. In industry, I developed BullClaw, a financial report generation system that ranked 3rd overall and 1st in US market on OpenFinArena benchmark.">在科研方面，我已在ACL 2025（Oral）和ACL Findings 2026上发表论文，研究成果涉及多智能体社会模拟和长程对话记忆框架。在产业方面，我参与了金融研报生成系统BullClaw的开发，在OpenFinArena评测中总榜排名第3、美国市场排名第1。</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="2">0</span>
+                            <span class="stat-label" data-zh="顶会论文" data-en="Top Papers">顶会论文</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="2">0</span>
+                            <span class="stat-label" data-zh="代表项目" data-en="Projects">代表项目</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="99">0</span>
+                            <span class="stat-label" data-zh="TOEFL" data-en="TOEFL">TOEFL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-highlights">
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3 data-zh="大模型智能体" data-en="LLM Agents">大模型智能体</h3>
+                        <p data-zh="熟练掌握LangGraph等智能体框架，深度使用Claude Code、Codex等Agent，熟悉Skills、Harness、Memory等概念" data-en="Proficient in LangGraph and other agent frameworks, extensive experience with Claude Code, Codex, familiar with Skills, Harness, Memory concepts">熟练掌握LangGraph等智能体框架，深度使用Claude Code、Codex等Agent，熟悉Skills、Harness、Memory等概念</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 data-zh="AI4Finance" data-en="AI4Finance">AI4Finance</h3>
+                        <p data-zh="开发金融研报生成系统BullClaw，在OpenFinArena评测中超越DeepSeek-v3.2等基线模型" data-en="Developed BullClaw financial report system, outperforming DeepSeek-v3.2 and other baselines on OpenFinArena">开发金融研报生成系统BullClaw，在OpenFinArena评测中超越DeepSeek-v3.2等基线模型</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 data-zh="多智能体社会模拟" data-en="Multi-Agent Simulation">多智能体社会模拟</h3>
+                        <p data-zh="提出基于LLM Agents的计算社会学研究新范式，成果被ACL 2025接收为Oral" data-en="Proposed computational sociology paradigm using LLM Agents, accepted as Oral at ACL 2025">提出基于LLM Agents的计算社会学研究新范式，成果被ACL 2025接收为Oral</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="section research">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-zh="研究方向" data-en="Research">研究方向</span>
+                <h2 class="section-title" data-zh="研究兴趣" data-en="Research Interests">研究兴趣</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="research-grid">
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 data-zh="LLM Agent" data-en="LLM Agent">LLM Agent</h3>
+                    <p data-zh="研究大模型智能体的架构设计、记忆机制与多智能体协作，探索Agent在复杂任务中的推理与规划能力" data-en="Research on LLM agent architecture, memory mechanisms, and multi-agent collaboration, exploring reasoning and planning capabilities in complex tasks">研究大模型智能体的架构设计、记忆机制与多智能体协作，探索Agent在复杂任务中的推理与规划能力</p>
+                    <div class="research-tags">
+                        <span>LangGraph</span>
+                        <span>Memory</span>
+                        <span>Planning</span>
+                    </div>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 data-zh="Deep Research" data-en="Deep Research">Deep Research</h3>
+                    <p data-zh="探索深度研究场景下的信息检索、知识整合与推理链构建，提升Agent在开放域研究任务中的表现" data-en="Exploring information retrieval, knowledge integration, and reasoning chain construction in deep research scenarios">探索深度研究场景下的信息检索、知识整合与推理链构建，提升Agent在开放域研究任务中的表现</p>
+                    <div class="research-tags">
+                        <span>RAG</span>
+                        <span>Reasoning</span>
+                        <span>Retrieval</span>
+                    </div>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3 data-zh="AI4Finance" data-en="AI4Finance">AI4Finance</h3>
+                    <p data-zh="将大模型应用于金融领域，研究自动化研报生成、金融数据分析与投资策略挖掘" data-en="Applying LLMs to finance, researching automated report generation, financial data analysis, and investment strategy mining">将大模型应用于金融领域，研究自动化研报生成、金融数据分析与投资策略挖掘</p>
+                    <div class="research-tags">
+                        <span>FinTech</span>
+                        <span>Report Gen</span>
+                        <span>Analysis</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="section publications">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-zh="学术论文" data-en="Publications">学术论文</span>
+                <h2 class="section-title" data-zh="发表论文" data-en="Publications">发表论文</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="publications-list">
+                <div class="publication-item">
+                    <div class="publication-badge oral">ACL Oral</div>
+                    <div class="publication-content">
+                        <h3>Investigating and Extending Homans' Social Exchange Theory with Large Language Model based Agents</h3>
+                        <p class="publication-authors">Lei Wang, <strong>Zheqing Zhang</strong>, Xu Chen</p>
+                        <p class="publication-venue">ACL 2025 · Oral</p>
+                        <p class="publication-desc" data-zh="提出基于LLM Agents的计算社会学研究新范式，在智能体群体中成功验证社会交换理论SET，并对传统理论进行拓展" data-en="Proposed a computational sociology paradigm using LLM Agents, successfully verified Social Exchange Theory in agent groups and extended traditional theory">提出基于LLM Agents的计算社会学研究新范式，在智能体群体中成功验证社会交换理论SET，并对传统理论进行拓展</p>
+                        <div class="publication-links">
+                            <a href="https://arxiv.org/abs/2502.12450" target="_blank" rel="noopener" class="pub-link">
+                                <i class="fas fa-file-pdf"></i> <span data-zh="论文" data-en="Paper">论文</span>
+                            </a>
+                            <span class="pub-topic">LLM Agent</span>
+                            <span class="pub-topic">LLM4Social Science</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="publication-item">
+                    <div class="publication-badge findings">ACL Findings</div>
+                    <div class="publication-content">
+                        <h3>TiMem: Temporal-Hierarchical Memory Consolidation for Long-Horizon Conversational Agents</h3>
+                        <p class="publication-authors">Kai Li, Xuanqing Yu, Ziyi Ni, Yi Zeng, Yao Xu, <strong>Zheqing Zhang</strong>, Xin Li, Jitao Sang, Xiaogang Duan, Xuelei Wang, Chengbao Liu, Jie Tan</p>
+                        <p class="publication-venue">ACL Findings 2026</p>
+                        <p class="publication-desc" data-zh="提出时序层级记忆框架TiMem，实现从碎片化对话到结构化人物画像的动态凝练，已成功落地为公司主力产品线" data-en="Proposed TiMem, a temporal-hierarchical memory framework that consolidates fragmented conversations into structured persona profiles, now deployed as a main product line">提出时序层级记忆框架TiMem，实现从碎片化对话到结构化人物画像的动态凝练，已成功落地为公司主力产品线</p>
+                        <div class="publication-links">
+                            <a href="https://arxiv.org/abs/2601.02845v1" target="_blank" rel="noopener" class="pub-link">
+                                <i class="fas fa-file-pdf"></i> <span data-zh="论文" data-en="Paper">论文</span>
+                            </a>
+                            <span class="pub-topic">Agent</span>
+                            <span class="pub-topic">Memory</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="publications-cta">
+                <a href="https://scholar.google.com/citations?user=2CJJifEAAAAJ&hl=en" target="_blank" rel="noopener" class="btn btn-outline">
+                    <span data-zh="查看 Google Scholar 主页" data-en="View Google Scholar Profile">查看 Google Scholar 主页</span>
+                    <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-zh="项目经历" data-en="Projects">项目经历</span>
+                <h2 class="section-title" data-zh="代表项目" data-en="Featured Projects">代表项目</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/zheqing229/BullClaw.git" target="_blank" rel="noopener" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://openfinarena.com/fin-doc-research" target="_blank" rel="noopener" aria-label="Benchmark">
+                                <i class="fas fa-trophy"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3>BullClaw</h3>
+                    <p class="project-subtitle" data-zh="基于大模型多智能体的多语言金融研报生成系统" data-en="Multi-language Financial Report Generation System based on LLM Multi-Agents">基于大模型多智能体的多语言金融研报生成系统</p>
+                    <ul class="project-details">
+                        <li data-zh="独立构建基于LangGraph的有状态多智能体工作流，支持全球8大交易所、4种语言财报的自动化分析" data-en="Built stateful multi-agent workflow based on LangGraph, supporting automated analysis of financial reports from 8 global exchanges in 4 languages">独立构建基于LangGraph的有状态多智能体工作流，支持全球8大交易所、4种语言财报的自动化分析</li>
+                        <li data-zh="引入Sirchmunk (Agentic Search)作为核心检索增强算法，大幅降低跨语种分析中的数值幻觉" data-en="Introduced Sirchmunk (Agentic Search) as core RAG algorithm, significantly reducing numerical hallucinations in cross-lingual analysis">引入Sirchmunk (Agentic Search)作为核心检索增强算法，大幅降低跨语种分析中的数值幻觉</li>
+                        <li data-zh="在OpenFinArena/FinDocResearch评测中：总榜第3，美国市场第1，中国大陆第2，超越DeepSeek-v3.2等基线" data-en="On OpenFinArena/FinDocResearch: Ranked 3rd overall, 1st in US market, 2nd in China, outperforming DeepSeek-v3.2 baselines">在OpenFinArena/FinDocResearch评测中：总榜第3，美国市场第1，中国大陆第2，超越DeepSeek-v3.2等基线</li>
+                    </ul>
+                    <div class="project-badges">
+                        <span class="badge">LangGraph</span>
+                        <span class="badge">RAG</span>
+                        <span class="badge">Multi-Agent</span>
+                        <span class="badge">Finance</span>
+                    </div>
+                    <div class="project-rank">
+                        <a href="https://openfinarena.com/fin-doc-research" target="_blank" rel="noopener" class="rank-link">
+                            <i class="fas fa-trophy"></i>
+                            <span data-zh="OpenFinArena 评测排名：总榜 #3 · 美股 #1 · A股 #2" data-en="OpenFinArena Ranking: Overall #3 · US #1 · CN #2">OpenFinArena 评测排名：总榜 #3 · 美股 #1 · A股 #2</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-search-dollar"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/zheqing229/Stock-Meme-Hunter.git" target="_blank" rel="noopener" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3>Stock-Meme-Hunter</h3>
+                    <p class="project-subtitle" data-zh="基于混合检索与LLM重排的炒作逻辑挖掘" data-en="Hype Logic Mining based on Hybrid Retrieval and LLM Reranking">基于混合检索与LLM重排的炒作逻辑挖掘</p>
+                    <ul class="project-details">
+                        <li data-zh="针对A股玄学炒作（谐音、隐喻），提出拼音+概念双路倒排索引，捕捉非语义关联" data-en="Proposed pinyin + concept dual inverted index for A-share 'metaphorical hype', capturing non-semantic associations">针对A股"玄学炒作"（谐音、隐喻），提出拼音+概念双路倒排索引，捕捉非语义关联</li>
+                        <li data-zh="设计四层漏斗筛选模型（LLM Query理解→多路召回→粗排截断→LLM精排），平衡检索覆盖率与推理成本" data-en="Designed 4-layer funnel model (LLM Query → Multi-recall → Coarse rank → LLM fine rank), balancing coverage and cost">设计四层漏斗筛选模型（LLM Query理解→多路召回→粗排截断→LLM精排），平衡检索覆盖率与推理成本</li>
+                    </ul>
+                    <div class="project-badges">
+                        <span class="badge">Retrieval</span>
+                        <span class="badge">LLM</span>
+                        <span class="badge">Finance</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-zh="实习经历" data-en="Experience">实习经历</span>
+                <h2 class="section-title" data-zh="工作经历" data-en="Work Experience">工作经历</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-company">
+                                <h3 data-zh="智悦云创（AI科技初创公司）" data-en="ZhiYueYunChuang (AI Startup)">智悦云创（AI科技初创公司）</h3>
+                                <span class="timeline-role" data-zh="大模型算法 / 后端研发实习" data-en="LLM Algorithm / Backend Dev Intern">大模型算法 / 后端研发实习</span>
+                            </div>
+                            <span class="timeline-date">2025.02 - 2025.06</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li data-zh="作为核心成员主导"简历优化助手"产品线，负责系统后端架构设计与Agent编排" data-en="Led the 'Resume Optimizer' product line as core member, responsible for backend architecture design and Agent orchestration">作为核心成员主导"简历优化助手"产品线，负责系统后端架构设计与Agent编排</li>
+                            <li data-zh="提出时序层级记忆框架TiMem，解决长对话中智能体记忆遗忘问题，成果被ACL Findings 2026录用" data-en="Proposed TiMem temporal-hierarchical memory framework, solving agent memory decay in long conversations, accepted by ACL Findings 2026">提出时序层级记忆框架TiMem，解决长对话中智能体记忆遗忘问题，成果被ACL Findings 2026录用</li>
+                            <li data-zh="TiMem框架已成功落地，现作为公司主力产品线" data-en="TiMem framework successfully deployed, now serving as the company's main product line">TiMem框架已成功落地，现作为公司主力产品线</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-zh="专业技能" data-en="Skills">专业技能</span>
+                <h2 class="section-title" data-zh="技术栈" data-en="Tech Stack">技术栈</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> <span data-zh="编程语言" data-en="Languages">编程语言</span></h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C/C++</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-robot"></i> <span data-zh="AI & 大模型" data-en="AI & LLM">AI & 大模型</span></h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">LangGraph</span>
+                        <span class="skill-tag">Claude Code</span>
+                        <span class="skill-tag">Codex</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> <span data-zh="开发工具" data-en="Tools">开发工具</span></h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Linux</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> <span data-zh="智能体概念" data-en="Agent Concepts">智能体概念</span></h3>
+                    <div class="skill-items">
+                        <span class="skill-tag">Skills</span>
+                        <span class="skill-tag">Harness</span>
+                        <span class="skill-tag">Memory</span>
+                        <span class="skill-tag">RAG</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-zh="教育背景" data-en="Education">教育背景</span>
+                <h2 class="section-title" data-zh="教育经历" data-en="Education">教育经历</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="education-card">
+                <div class="edu-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="edu-content">
+                    <h3 data-zh="中国人民大学 · 高瓴人工智能学院" data-en="Renmin University of China · Gaoling School of AI">中国人民大学 · 高瓴人工智能学院</h3>
+                    <p class="edu-degree" data-zh="人工智能专业 · 大四 · 已保研直博" data-en="Artificial Intelligence · Senior · Direct PhD admission">人工智能专业 · 大四 · 已保研直博</p>
+                    <div class="edu-details">
+                        <div class="edu-detail">
+                            <span class="detail-label">TOEFL</span>
+                            <span class="detail-value">99</span>
+                        </div>
+                        <div class="edu-detail">
+                            <span class="detail-label" data-zh="研究方向" data-en="Research">研究方向</span>
+                            <span class="detail-value">Agent, Deep Research, AI4Finance</span>
+                        </div>
+                    </div>
+                    <div class="edu-awards">
+                        <span class="award-tag" data-zh="优秀毕业生" data-en="Outstanding Graduate">优秀毕业生</span>
+                        <span class="award-tag" data-zh="优秀学生干部" data-en="Outstanding Student Cadre">优秀学生干部</span>
+                        <span class="award-tag" data-zh="优秀团学骨干" data-en="Outstanding League Cadre">优秀团学骨干</span>
+                        <span class="award-tag" data-zh="社会工作与志愿服务二等奖学金" data-en="Second-Class Scholarship for Social Work and Volunteer Service">社会工作与志愿服务二等奖学金</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-zh="联系方式" data-en="Contact">联系方式</span>
+                <h2 class="section-title" data-zh="联系我" data-en="Get In Touch">联系我</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-content">
+                <p class="contact-intro" data-zh="欢迎与我讨论学术合作、实习机会或任何技术话题" data-en="Feel free to discuss research collaborations, internship opportunities, or any tech topics with me">欢迎与我讨论学术合作、实习机会或任何技术话题</p>
+                <div class="contact-methods">
+                    <a href="mailto:zhangzheqing@ruc.edu.cn" class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">zhangzheqing@ruc.edu.cn</span>
+                        </div>
+                    </a>
+                    <a href="wechat:log10010000" class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-comment"></i>
+                        </div>
+                        <div>
+                            <span class="contact-label" data-zh="微信" data-en="WeChat">微信</span>
+                            <span class="contact-value">log10010000</span>
+                        </div>
+                    </a>
+                    <a href="https://github.com/zheqing229/" target="_blank" rel="noopener" class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div>
+                            <span class="contact-label">GitHub</span>
+                            <span class="contact-value">github.com/zheqing229</span>
+                        </div>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=2CJJifEAAAAJ&hl=en" target="_blank" rel="noopener" class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <span class="contact-label">Google Scholar</span>
+                            <span class="contact-value" data-zh="查看论文" data-en="View Papers">查看论文</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 张哲卿 Zheqing Zhang</p>
+                <div class="footer-links">
+                    <a href="https://github.com/zheqing229/" target="_blank" rel="noopener" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=2CJJifEAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar">
+                        <i class="fas fa-graduation-cap"></i>
+                    </a>
+                    <a href="mailto:zhangzheqing@ruc.edu.cn" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
