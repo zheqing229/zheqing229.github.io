@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A Small Corner for Thoughts on AI, Finance, Football, and Life
-date: 2026-05-10
+date: 2025-05-10
 tags: AI Finance Football Life
 description: My first blog post, about what I hope to write here in the future.
 featured: true
