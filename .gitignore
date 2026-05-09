@@ -1,3 +1,14 @@
 .claude/
 resume.tex
 zzq.txt
+
+# Jekyll / al-folio
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+.bundle/
+Gemfile.lock
+node_modules/
+lighthouse_results/
