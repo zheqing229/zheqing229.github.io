@@ -69,6 +69,15 @@
 
       .title {
         font-weight: bolder;
+
+        a {
+          color: var(--global-text-color);
+
+          &:hover {
+            color: var(--global-theme-color);
+            text-decoration: none;
+          }
+        }
       }
 
       .author {
@@ -172,6 +181,7 @@
       div.abstract.hidden.open {
         border-color: var(--global-text-color);
       }
+
     }
     div.award.hidden {
       border: dashed 1px var(--global-bg-color);

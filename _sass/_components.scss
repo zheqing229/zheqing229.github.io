@@ -141,6 +141,60 @@ ul.task-list input[type="checkbox"] {
     }
   }
 
+  .project-card {
+    border: 1px solid var(--global-divider-color);
+    border-radius: 1rem;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+  }
+
+  .project-card-horizontal {
+    .card-body {
+      padding: 1.5rem 1.5rem 1.25rem 1.5rem;
+    }
+
+    .project-card-header {
+      margin-bottom: 1rem;
+    }
+
+    .card-title {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-summary {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--global-text-color-light);
+      margin-bottom: 0;
+    }
+
+    .project-details {
+      color: var(--global-text-color);
+      margin-bottom: 1rem;
+
+      p {
+        line-height: 1.8;
+        margin-bottom: 0.9rem;
+      }
+
+      ul {
+        margin-bottom: 0;
+        padding-left: 1.25rem;
+      }
+
+      li {
+        margin-bottom: 0.75rem;
+        line-height: 1.75;
+      }
+    }
+
+    .project-links {
+      margin-top: 1rem;
+      align-items: center;
+    }
+  }
+
   .col {
     padding-bottom: 1rem;
   }
