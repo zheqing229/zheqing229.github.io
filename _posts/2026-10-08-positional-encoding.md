@@ -1,13 +1,11 @@
 ---
 layout: post
-title: "关于位置编码的一些思考"
+title: "从 RoPE 到 NoPE：长上下文中的位置建模正在重新分工"
 date: 2026-10-08
 tags: AI LLM Positional-Encoding RoPE
-description: "记录我对大模型位置编码的理解。"
+description: "记录我对大模型位置编码的理解: RoPE 把位置先验直接写进架构；NoPE 把位置交给模型隐式学习。所以有一个趋势是把两者结合分工"
 featured: false
 ---
-
-# 从 RoPE 到 NoPE：长上下文中的位置建模正在重新分工
 
 ## TL;DR
 
@@ -386,7 +384,7 @@ $$
 
 论文给出了一个正态分布拟合注意力分数的图.
 
-![正态分布拟合注意力分数图](NormalApprox.png)
+![正态分布拟合注意力分数图](/assets/img/NormalApprox.png)
 
 *使用正态分布拟合注意力分数，图片来源：RoPE Distinguishes Neither Positions Nor Tokens in Long Contexts, Provably*
 
@@ -798,7 +796,7 @@ $$
 D^{(l)}(A,B)=\min_{(P,Q)\in A_l\times B_l}\frac1T\sum_{t=1}^{T}D_{\mathrm{JS}}\bigl(P_t\|Q_t\bigr).
 $$
 
-![NoPE 和其他位置编码的 JS 散度图](JS-NoPE.png)
+![NoPE 和其他位置编码的 JS 散度图](/assets/img/JS-NoPE.png)
 
 *SCAN数据集上，NoPE注意力模式相对于其他位置编码方案的距离。左图是逐层距离，右图为全层平均距离。NoPE'是换随机种子训练的NoPE。图片来源：The Impact of Positional Encoding on Length Generalization in Transformers*
 
@@ -813,7 +811,7 @@ $$
 
 注意力距离的分布也印证了这一点：NoPE 和 T5 RPE 都呈现出“近处 + 远处”的双峰注意力（既有短程依赖，也会回看输入），而 ALiBi 因为 recency bias 强烈偏向近邻，Rotary 则更接近 APE 的均匀分布。
 
-![各位置编码的注意力距离分布图](normalized_attended_distance.png)
+![各位置编码的注意力距离分布图](/assets/img/normalized_attended_distance.png)
 
 *自注意力机制中Query与Key的归一化距离分布（加法任务 + 完整草稿本），在所有层与所有注意力头上取平均。图片来源：The Impact of Positional Encoding on Length Generalization in Transformers*
 
@@ -1169,7 +1167,7 @@ $$
 
 顺带一提，在运行这个实验的过程中，我们使用了 [SwanLab](https://swanlab.cn/) 来记录实验数据，这是一个对标 WandB 的国产工具，具有指标可视化记录、硬件监控、多人协作等功能。
 
-![SwanLab 实验结果图](swanlab.png)
+![SwanLab 实验结果图](/assets/img/swanlab.png)
 
 ## 7. 总结：让位置建模各司其职
 
